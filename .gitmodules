@@ -1,0 +1,3 @@
+[submodule "project_management/tasks"]
+	path = project_management/tasks
+	url = git@github.com:team8/project_management.git

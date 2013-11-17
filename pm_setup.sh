@@ -1,3 +1,5 @@
+# shell script to provision vagrant vm's
+
 apt-get update
 apt-get dist-upgrade -y
 debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password pm_django'

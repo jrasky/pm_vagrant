@@ -1,44 +1,28 @@
 # Django settings for project_management project.
-import djcelery
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Jerome Rasky', 'jerome@rasky.co'),
-    ('Maxwell Bernstein', 'tekknolagi@gmail.com')
 )
 
 MANAGERS = ADMINS
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-SERVER_EMAIL = "projects@palyrobotics.com"
 
 # set this to false to disable all automatic emails
-PM_SEND_EMAILS = True
-
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "projects@palyrobotics.com"
-EMAIL_HOST_PASSWORD = "ireallyloveassigningpeople"
+PM_SEND_EMAILS = False
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
+        'HOST': '',
         'NAME': 'project_management',
-        'USER': 'projects',
-        'PASSWORD': 'machine8',
-        'PORT': 3306
+        'USER': 'root',
+        'PASSWORD': 'pm_django',
+        'PORT': ''
     }
 }
 
-# Celery config
-djcelery.setup_loader()
-
-CELERY_IMPORTS = ('tasks.celery_tasks',)
 
 PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yui.YUICompressor'
 
@@ -64,7 +48,7 @@ PIPELINE_CSS = {
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["projects.palyrobotics.com"]
+ALLOWED_HOSTS = []
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -91,7 +75,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/var/django/media'
+MEDIA_ROOT = '/vagrant/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -102,7 +86,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/var/django/static'
+STATIC_ROOT = '/vagrant/static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -168,7 +152,6 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/var/django/templates",
 )
 
 INSTALLED_APPS = (
@@ -183,7 +166,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'djcelery',
     'pipeline',
     'tasks',
 )

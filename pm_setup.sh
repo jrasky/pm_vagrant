@@ -3,7 +3,7 @@ apt-get dist-upgrade -y
 debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password pm_django'
 debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password pm_django'
 apt-get install -y mysql-server python-pip libmysqlclient-dev python-dev yui-compressor
-mysql -u root -ppm_django <<< 'create database project_management'
+mysql -u root -ppm_django <<< 'create database project_management charset=utf8'
 pip install "django<1.5"
 pip install "django-pipeline"
 pip install -U "distribute"

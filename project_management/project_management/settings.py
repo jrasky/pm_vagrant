@@ -14,12 +14,8 @@ PM_SEND_EMAILS = False
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '',
-        'NAME': 'project_management',
-        'USER': 'root',
-        'PASSWORD': 'pm_django',
-        'PORT': ''
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/vagrant/dev.db',
     }
 }
 

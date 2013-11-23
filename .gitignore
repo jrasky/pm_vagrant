@@ -3,3 +3,4 @@
 *.pyc
 .vagrant
 static
+dev.db

@@ -4,3 +4,4 @@
 .vagrant
 static
 dev.db
+whoosh_index

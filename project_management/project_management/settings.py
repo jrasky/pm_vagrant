@@ -12,6 +12,9 @@ MANAGERS = ADMINS
 # set this to false to disable all automatic emails
 PM_SEND_EMAILS = False
 
+# set this false when celery is unavailable
+PM_CELERY_AVAILABLE = False
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

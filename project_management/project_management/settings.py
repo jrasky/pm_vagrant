@@ -30,7 +30,6 @@ PIPELINE_CSS = {
     "bootstrap": {
         "source_filenames" : (
             "css/bootstrap.css",
-            "css/bootstrap-responsive.css"
         ),
         "output_filename": "css/bootstrap-min.css"
     },
@@ -177,6 +176,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'pipeline',
     'tasks',
+    'widget_tweaks',
 )
 
 # A sample logging configuration. The only tangible logging

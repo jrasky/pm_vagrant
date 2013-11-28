@@ -14,4 +14,4 @@ pip install --upgrade "django-widget-tweaks"
 python /vagrant/project_management/manage.py syncdb --noinput
 python /vagrant/project_management/manage.py loaddata /vagrant/project_management/initial_data.json
 python /vagrant/project_management/manage.py rebuild_index --noinput
-python /vagrant/project_management/manage.py collectstatic --noinput
+python /vagrant/project_management/manage.py collectstatic --link --noinput

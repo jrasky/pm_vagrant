@@ -2,7 +2,7 @@
 
 apt-get update
 apt-get dist-upgrade -y
-apt-get install -y python-pip libmysqlclient-dev python-dev yui-compressor
+apt-get install -y python-pip libmysqlclient-dev python-dev
 pip install --upgrade "django<1.5"
 pip install --upgrade "django-pipeline"
 pip install --upgrade "distribute"

@@ -22,12 +22,13 @@ DATABASES = {
     }
 }
 
+# yui-compressor isn't installed on dev instances
 
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yui.YUICompressor'
+PIPELINE_ENABLED = False
 
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yui.YUICompressor'
+PIPELINE_CSS_COMPRESSOR = None
 
-PIPELINE_YUI_BINARY = "/usr/bin/env yui-compressor"
+PIPELINE_JS_COMPRESSOR = None
 
 PIPELINE_CSS = {
     "bootstrap": {

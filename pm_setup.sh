@@ -11,6 +11,7 @@ pip install --upgrade "django-html5"
 pip install --upgrade "django-haystack"
 pip install --upgrade "whoosh"
 pip install --upgrade "django-widget-tweaks"
+pip install --upgrade "django_select2"
 python /vagrant/project_management/manage.py syncdb --noinput
 python /vagrant/project_management/manage.py loaddata /vagrant/project_management/initial_data.json
 python /vagrant/project_management/manage.py rebuild_index --noinput

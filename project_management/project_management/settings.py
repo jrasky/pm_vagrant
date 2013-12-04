@@ -22,6 +22,9 @@ DATABASES = {
     }
 }
 
+# settings for django_select2
+AUTO_RENDER_SELECT2_STATICS = False
+
 # yui-compressor isn't installed on dev instances
 
 PIPELINE_ENABLED = False
@@ -35,13 +38,35 @@ PIPELINE_CSS = {
         "source_filenames" : (
             "css/bootstrap.css",
         ),
-        "output_filename": "css/bootstrap-min.css"
+        "output_filename": "css/bootstrap.min.css"
+    },
+    "select2": {
+        "source_filenames" : (
+            "css/select2.css",
+            "css/select2-bootstrap.css",
+        ),
+        "output_filename": "css/select2.min.css"
     },
     "tasks": {
         "source_filenames": (
             "tasks/css/common.css",
         ),
         "output_filename": "tasks/css/tasks.css"
+    }
+}
+
+PIPELINE_JS = {
+    "select2": {
+        "source_filenames": (
+            "js/select2.js",
+        ),
+        "output_filename": "js/select2.min.js"
+    },
+    "jquery": {
+        "source_filenames": (
+            "js/jquery.js",
+        ),
+        "output_filename": "js/jquery.min.js"
     }
 }
 

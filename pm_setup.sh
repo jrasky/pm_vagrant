@@ -3,10 +3,10 @@
 apt-get update
 apt-get dist-upgrade -y
 apt-get install -y python-pip
-pip install --upgrade "django<1.5"
+pip install --upgrade "django"
 pip install --upgrade "django-pipeline"
 pip install --upgrade "distribute"
-pip install --upgrade "django-grappelli<2.5.0"
+pip install --upgrade "django-grappelli"
 pip install --upgrade "django-html5"
 pip install --upgrade "django-haystack"
 pip install --upgrade "whoosh"

@@ -1,1 +1,1 @@
-python project_management/manage.py runserver 10.0.2.15:8000
+python project_management/manage.py runserver 0.0.0.0:8000

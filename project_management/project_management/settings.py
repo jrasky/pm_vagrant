@@ -189,6 +189,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    "/vagrant/templates",
 )
 
 INSTALLED_APPS = (
@@ -243,44 +244,3 @@ ADD_TASK_AUTHOR_SUBJECT = "[Paly Robotics] You just authored a task"
 ADD_TASK_ASSIGNED_SUBJECT = "[Paly Robotics] You have been assigned to a new task"
 EDIT_TASK_AUTHOR_SUBJECT = "[Paly Robotics] A task you authored has been updated"
 EDIT_TASK_ASSIGNED_SUBJECT = "[Paly Robotics] A task you are assigned to has been updated"
-
-ADD_PROJECT_EMAIL = """Hello,
-                            
-    You've been added as lead on a new project. Make sure to check in with the
-project manager and other captains as you make progress.
-
-View project details at %s"""
-
-EDIT_PROJECT_EMAIL = """Hello,
-
-    A project you are loading has been updated. Check the project management site
-for more details. Make sure to check in with the project manager and other captains
-as you make progress.
-
-View project details at %s"""
-
-ADD_TASK_AUTHOR_EMAIL = """Hello,
-    You just created task. Remember to keep tabs on its progress and
-report to the project manager and other captains.
-
-View task details at %s"""
-
-ADD_TASK_ASSIGNED_EMAIL = """Hello,
-
-    You've been assigned to a new task. Make sure to check in with the
-project manager and other captains as you make progress.
-
-View task details at %s"""
-
-EDIT_TASK_AUTHOR_EMAIL = """Hello,
-    A task you authored has been updated. Remember to keep tabs on its progress and
-report to the project manager and other captains.
-
-View task details at %s"""
-
-EDIT_TASK_ASSIGNED_EMAIL = """Hello,
-
-    A task you are assigned to has been updated. Make sure to check in with the
-project manager and other captains as you make progress.
-
-View task details at %s"""

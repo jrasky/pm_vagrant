@@ -11,6 +11,11 @@ MANAGERS = ADMINS
 # set this to false to disable all automatic emails
 PM_SEND_EMAILS = False
 
+# change these two to match the deployment
+CURRENT_SITE_PREFIX = "http://localhost:8000"
+
+PROJECT_MANAGER_EMAIL = "vagrant@bog.us"
+
 # set this false when celery is unavailable
 PM_CELERY_AVAILABLE = False
 
@@ -242,3 +247,4 @@ ADD_TASK_AUTHOR_SUBJECT = "[Paly Robotics] You just authored a task"
 ADD_TASK_ASSIGNED_SUBJECT = "[Paly Robotics] You have been assigned to a new task"
 EDIT_TASK_AUTHOR_SUBJECT = "[Paly Robotics] A task you authored has been updated"
 EDIT_TASK_ASSIGNED_SUBJECT = "[Paly Robotics] A task you are assigned to has been updated"
+REMINDER_EMAIL_SUBJECT = "[Paly Robotics] Weekly project management reminder"
